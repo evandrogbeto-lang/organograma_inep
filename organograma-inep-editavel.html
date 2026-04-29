@@ -1,0 +1,1582 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>INEP — Estrutura Organizacional 2026</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --teal:#004D40;
+  --teal-mid:#006B5B;
+  --teal-light:#E0F2EF;
+  --orange:#D4500E;
+  --orange-light:#FEF0E8;
+  --green:#1B6B3A;
+  --green-light:#E8F5EE;
+  --purple:#4A3D8F;
+  --purple-light:#EEECF9;
+  --slate:#4B5563;
+  --slate-light:#F3F4F6;
+  --bg:#F0F4F3;
+  --surface:#FFFFFF;
+  --border:#D1D5DB;
+  --border-light:#E5E7EB;
+  --text:#111827;
+  --muted:#6B7280;
+  --radius:10px;
+  --radius-lg:14px;
+  --shadow:0 2px 8px rgba(0,0,0,0.08),0 1px 3px rgba(0,0,0,0.05);
+  --shadow-hover:0 6px 20px rgba(0,0,0,0.12),0 2px 6px rgba(0,0,0,0.06);
+}
+
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;line-height:1.5}
+
+/* ── HEADER ── */
+.header{background:var(--teal);position:sticky;top:0;z-index:200;box-shadow:0 2px 12px rgba(0,0,0,0.25)}
+.header-inner{max-width:1440px;margin:0 auto;padding:0 28px;display:flex;align-items:center;gap:18px;height:60px}
+.logo{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.logo-box{width:38px;height:38px;background:white;border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:11px;color:var(--teal);letter-spacing:-0.5px;line-height:1.2;text-align:center}
+.logo-info{color:white}
+.logo-title{font-size:15px;font-weight:700;letter-spacing:-0.3px}
+.logo-sub{font-size:10px;opacity:0.65;letter-spacing:0.1px}
+.header-divider{width:1px;height:30px;background:rgba(255,255,255,0.2);flex-shrink:0}
+.header-page{color:rgba(255,255,255,0.85);font-size:13px;font-weight:500}
+.header-year{background:rgba(255,255,255,0.15);color:white;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;border:1px solid rgba(255,255,255,0.2)}
+.header-right{margin-left:auto;display:flex;align-items:center;gap:8px}
+.search-wrap{position:relative}
+.search-icon{position:absolute;left:11px;top:50%;transform:translateY(-50%);opacity:0.55;pointer-events:none}
+.search-input{background:rgba(255,255,255,0.13);border:1px solid rgba(255,255,255,0.22);border-radius:8px;color:white;font-size:13px;padding:8px 14px 8px 36px;width:230px;outline:none;transition:all 0.25s}
+.search-input::placeholder{color:rgba(255,255,255,0.45)}
+.search-input:focus{background:rgba(255,255,255,0.2);border-color:rgba(255,255,255,0.45);width:270px}
+.hbtn{background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);color:white;padding:7px 13px;border-radius:8px;font-size:12px;cursor:pointer;transition:all 0.15s;display:flex;align-items:center;gap:5px;white-space:nowrap}
+.hbtn:hover{background:rgba(255,255,255,0.22)}
+.hbtn svg{flex-shrink:0}
+
+/* ── MAIN ── */
+.main{max-width:1440px;margin:0 auto;padding:28px 28px 48px}
+
+/* ── PRESIDÊNCIA HERO ── */
+.hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-mid) 100%);border-radius:var(--radius-lg);padding:28px 36px;color:white;display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:6px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;right:-40px;top:-40px;width:200px;height:200px;border-radius:50%;background:rgba(255,255,255,0.05)}
+.hero::after{content:'';position:absolute;right:60px;bottom:-60px;width:150px;height:150px;border-radius:50%;background:rgba(255,255,255,0.04)}
+.hero-left{}
+.hero-eyebrow{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;opacity:0.6;margin-bottom:6px;font-weight:600}
+.hero-title{font-size:26px;font-weight:700;letter-spacing:-0.7px;margin-bottom:6px}
+.hero-ramal{font-size:12px;opacity:0.7;display:flex;align-items:center;gap:6px}
+.hero-stats{display:flex;gap:10px;position:relative;z-index:1}
+.stat-pill{background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.18);border-radius:10px;padding:12px 20px;text-align:center}
+.stat-num{font-size:22px;font-weight:700;letter-spacing:-0.5px}
+.stat-label{font-size:10px;opacity:0.6;text-transform:uppercase;letter-spacing:0.8px;margin-top:2px}
+
+/* ── CONNECTOR ── */
+.v-connector{display:flex;justify-content:center;margin:0}
+.v-connector-line{width:2px;height:24px;background:var(--border)}
+
+/* ── LEGEND ── */
+.legend{display:flex;align-items:center;gap:20px;flex-wrap:wrap;background:var(--surface);border:1px solid var(--border-light);border-radius:var(--radius);padding:12px 20px;margin-bottom:24px}
+.legend-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.8px;color:var(--muted)}
+.legend-sep{width:1px;height:18px;background:var(--border-light)}
+.legend-item{display:flex;align-items:center;gap:7px;font-size:12px;color:var(--muted);cursor:default}
+.legend-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+
+/* ── SEARCH RESULTS BAR ── */
+.results-bar{display:none;align-items:center;gap:8px;margin-bottom:16px;padding:10px 16px;background:var(--surface);border:1px solid var(--border-light);border-radius:var(--radius);font-size:13px}
+.results-bar.show{display:flex}
+.clear-btn{background:none;border:none;color:var(--teal);cursor:pointer;font-size:12px;text-decoration:underline;padding:0;margin-left:auto}
+
+/* ── SECTION ── */
+.section{margin-bottom:28px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-stripe{width:3px;height:20px;border-radius:2px}
+.section-name{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.8px;color:var(--muted)}
+.section-count{background:var(--border);color:var(--muted);border-radius:20px;padding:2px 9px;font-size:11px;font-weight:600}
+
+/* ── CHIP (direct assistance) ── */
+.chips-row{display:flex;gap:10px;flex-wrap:wrap}
+.chip{background:var(--surface);border:1.5px solid var(--border-light);border-left-width:3px;border-radius:var(--radius);padding:13px 16px;flex:1;min-width:140px;max-width:220px;transition:all 0.2s;cursor:pointer}
+.chip:hover{box-shadow:var(--shadow);transform:translateY(-1px)}
+.chip-sigla{font-size:12px;font-weight:800;letter-spacing:-0.2px;margin-bottom:3px}
+.chip-name{font-size:10.5px;color:var(--muted);line-height:1.4;margin-bottom:6px}
+.chip-ramal{font-size:10px;color:var(--muted);display:flex;align-items:center;gap:4px}
+.chip-email{font-size:10px;color:var(--teal);display:flex;align-items:center;gap:4px;margin-top:3px;opacity:0.85;word-break:break-all}
+.chip-link{font-size:10px;margin-top:5px;display:flex;align-items:center;gap:3px;opacity:0.55}
+
+/* ── ORG CARD ── */
+.grid{display:grid;gap:12px}
+.grid-2{grid-template-columns:repeat(2,1fr)}
+.grid-3{grid-template-columns:repeat(3,1fr)}
+.grid-auto{grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
+
+.org-card{background:var(--surface);border:1.5px solid var(--border-light);border-radius:var(--radius);overflow:hidden;transition:all 0.2s;display:flex;flex-direction:column}
+.org-card:hover{box-shadow:var(--shadow-hover);transform:translateY(-1px)}
+.org-card.expanded{box-shadow:var(--shadow)}
+
+.card-header{padding:16px 18px;display:flex;align-items:flex-start;gap:12px;cursor:pointer;user-select:none}
+.card-bar{width:4px;border-radius:2px;flex-shrink:0;align-self:stretch;min-height:40px}
+.card-body{flex:1;min-width:0}
+.card-sigla{font-size:14px;font-weight:800;letter-spacing:-0.3px;margin-bottom:3px}
+.card-name{font-size:11.5px;color:var(--muted);line-height:1.45}
+.card-meta{display:flex;align-items:center;gap:10px;margin-top:8px;flex-wrap:wrap}
+.card-ramal{font-size:10.5px;color:var(--muted);display:flex;align-items:center;gap:4px}
+.card-email{font-size:10px;color:var(--teal);display:flex;align-items:center;gap:4px;margin-top:4px;opacity:0.85}
+.card-email a{color:inherit;text-decoration:none}
+.card-email a:hover{text-decoration:underline}
+.child-email{font-size:9.5px;color:var(--teal);display:flex;align-items:center;gap:3px;margin-top:2px;opacity:0.8;word-break:break-all}
+.child-email a{color:inherit;text-decoration:none}
+.child-email a:hover{text-decoration:underline}
+
+/* ── TABS ── */
+.tabs-bar{display:flex;gap:4px;background:var(--surface);border:1px solid var(--border-light);border-radius:var(--radius);padding:5px;margin-bottom:24px}
+.tab-btn{flex:1;padding:8px 16px;border:none;border-radius:7px;font-size:12px;font-weight:600;cursor:pointer;background:transparent;color:var(--muted);transition:all 0.18s;display:flex;align-items:center;justify-content:center;gap:6px}
+.tab-btn.active{background:var(--teal);color:white;box-shadow:0 2px 8px rgba(0,77,64,0.25)}
+.tab-btn:not(.active):hover{background:var(--teal-light);color:var(--teal)}
+.tab-panel{display:none}
+.tab-panel.active{display:block}
+
+/* ── TREE VIEW ── */
+.tree-wrap{background:var(--surface);border:1px solid var(--border-light);border-radius:var(--radius);padding:24px 20px}
+.tree-root{}
+.tree-node{margin:0;padding:0;list-style:none}
+.tree-item{display:flex;flex-direction:column;margin-bottom:2px}
+.tree-row{display:flex;align-items:center;gap:8px;padding:5px 8px;border-radius:7px;cursor:pointer;transition:background 0.15s;user-select:none}
+.tree-row:hover{background:var(--teal-light)}
+.tree-toggle-icon{width:16px;height:16px;display:flex;align-items:center;justify-content:center;color:var(--muted);transition:transform 0.2s;flex-shrink:0}
+.tree-toggle-icon.open{transform:rotate(90deg)}
+.tree-no-toggle{width:16px;flex-shrink:0}
+.tree-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.tree-sigla{font-size:12px;font-weight:800;min-width:80px;flex-shrink:0}
+.tree-name{font-size:11.5px;color:var(--muted);flex:1;line-height:1.4}
+.tree-ramal{font-size:10.5px;color:var(--muted);display:flex;align-items:center;gap:3px;white-space:nowrap}
+.tree-email{font-size:10.5px;color:var(--teal);display:flex;align-items:center;gap:3px;white-space:nowrap}
+.tree-email a{color:inherit;text-decoration:none}
+.tree-email a:hover{text-decoration:underline}
+.tree-children{padding-left:32px;border-left:2px dashed var(--border-light);margin-left:16px;margin-top:2px;display:none}
+.tree-children.open{display:block}
+.tree-root-row{background:var(--teal);color:white!important;border-radius:10px;padding:12px 16px!important;margin-bottom:8px;cursor:pointer}
+.tree-root-row .tree-sigla{color:white;font-size:14px;min-width:auto}
+.tree-root-row .tree-name{color:rgba(255,255,255,0.8);font-size:12px}
+.tree-root-row .tree-ramal{color:rgba(255,255,255,0.7)}
+.tree-root-row .tree-email{color:rgba(255,255,255,0.7)}
+.tree-root-row .tree-email a{color:rgba(255,255,255,0.7)}
+.tree-section-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.8px;color:var(--muted);margin:16px 0 6px 0;display:flex;align-items:center;gap:8px}
+.tree-section-label::after{content:'';flex:1;height:1px;background:var(--border-light)}
+.card-badge{font-size:10px;font-weight:600;padding:2px 8px;border-radius:20px}
+.card-toggle{width:24px;height:24px;border-radius:50%;background:var(--bg);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:transform 0.25s;color:var(--muted)}
+.org-card.expanded .card-toggle{transform:rotate(180deg)}
+.card-view-btn{font-size:10px;color:var(--teal);background:var(--teal-light);border:none;border-radius:6px;padding:3px 8px;cursor:pointer;display:flex;align-items:center;gap:3px;white-space:nowrap;transition:all 0.15s}
+.card-view-btn:hover{background:#b2dfdb}
+
+.card-children{display:none;border-top:1px solid var(--border-light);background:#FAFBFA}
+.org-card.expanded .card-children{display:block}
+
+.child{display:flex;align-items:flex-start;gap:10px;padding:9px 18px;transition:background 0.15s;border-bottom:1px solid var(--border-light);cursor:pointer}
+.child:last-child{border-bottom:none}
+.child:hover{background:#edf7f4}
+.child-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;margin-top:5px}
+.child-sigla{font-size:11px;font-weight:800;min-width:78px;flex-shrink:0}
+.child-name{font-size:11px;color:var(--muted);line-height:1.4;flex:1}
+.child-ramal{font-size:10px;color:var(--muted);white-space:nowrap;display:flex;align-items:center;gap:3px}
+.child-arrow{font-size:10px;color:var(--teal);opacity:0.5;flex-shrink:0;margin-left:4px}
+
+/* ── HIDDEN / HIGHLIGHT ── */
+.hidden{display:none!important}
+mark{background:#FEF08A;border-radius:2px;padding:0 1px;font-style:normal}
+
+/* ── FOOTER ── */
+.footer{margin-top:48px;padding-top:20px;border-top:1px solid var(--border-light);display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--muted);flex-wrap:wrap;gap:8px}
+
+/* ── MODAL ── */
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.45);z-index:500;align-items:flex-start;justify-content:center;padding:40px 20px;overflow-y:auto}
+.modal-overlay.open{display:flex}
+.modal{background:var(--surface);border-radius:var(--radius-lg);width:100%;max-width:800px;box-shadow:0 20px 60px rgba(0,0,0,0.2);animation:modalIn 0.22s ease;margin:auto}
+@keyframes modalIn{from{opacity:0;transform:translateY(-16px)}to{opacity:1;transform:translateY(0)}}
+
+.modal-header{padding:24px 28px 20px;display:flex;align-items:flex-start;gap:16px;border-bottom:1px solid var(--border-light)}
+.modal-bar{width:5px;border-radius:3px;align-self:stretch;min-height:50px;flex-shrink:0}
+.modal-info{flex:1}
+.modal-eyebrow{font-size:10px;text-transform:uppercase;letter-spacing:1.2px;color:var(--muted);font-weight:600;margin-bottom:4px}
+.modal-title{font-size:20px;font-weight:700;letter-spacing:-0.4px;margin-bottom:4px}
+.modal-subtitle{font-size:12.5px;color:var(--muted);line-height:1.5}
+.modal-ramal-badge{display:inline-flex;align-items:center;gap:5px;background:var(--teal-light);color:var(--teal);font-size:11px;font-weight:600;padding:4px 10px;border-radius:20px;margin-top:8px}
+.modal-close{width:32px;height:32px;border-radius:50%;background:var(--bg);border:1px solid var(--border-light);cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:18px;flex-shrink:0;transition:all 0.15s;line-height:1}
+.modal-close:hover{background:var(--border);color:var(--text)}
+
+.modal-body{padding:24px 28px}
+.modal-section-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.8px;color:var(--muted);margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.modal-section-title::after{content:'';flex:1;height:1px;background:var(--border-light)}
+
+/* ── PEOPLE TABLE ── */
+.people-table{width:100%;border-collapse:collapse;font-size:13px}
+.people-table th{text-align:left;padding:8px 12px;font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.6px;color:var(--muted);border-bottom:2px solid var(--border-light);background:var(--bg)}
+.people-table td{padding:12px 12px;border-bottom:1px solid var(--border-light);vertical-align:top}
+.people-table tr:last-child td{border-bottom:none}
+.people-table tr:hover td{background:#f8fbfa}
+.person-name{font-weight:600;color:var(--text);margin-bottom:2px}
+.person-role{font-size:11.5px;color:var(--muted)}
+.person-email{font-size:11.5px;color:var(--teal);display:flex;align-items:center;gap:4px}
+.person-email a{color:inherit;text-decoration:none}
+.person-email a:hover{text-decoration:underline}
+.person-ramal{font-size:12px;font-weight:600;color:var(--text);display:flex;align-items:center;gap:4px;white-space:nowrap}
+.secretaria-row td{background:#f0f8f5!important}
+.secretaria-badge{display:inline-block;background:var(--teal-light);color:var(--teal);font-size:10px;font-weight:600;padding:1px 7px;border-radius:10px;margin-left:6px}
+
+.empty-state{text-align:center;padding:40px 20px;color:var(--muted)}
+.empty-state-icon{font-size:32px;margin-bottom:10px}
+.empty-state p{font-size:13px}
+
+.modal-footer{padding:16px 28px;border-top:1px solid var(--border-light);display:flex;justify-content:space-between;align-items:center;background:#fafbfa;border-radius:0 0 var(--radius-lg) var(--radius-lg)}
+.modal-footer-note{font-size:11px;color:var(--muted)}
+.modal-footer-btn{background:var(--teal);color:white;border:none;border-radius:8px;padding:8px 16px;font-size:12px;font-weight:600;cursor:pointer;transition:all 0.15s}
+.modal-footer-btn:hover{background:var(--teal-mid)}
+
+/* ── EDIT MODE ── */
+.edit-mode-banner{display:none;position:fixed;bottom:0;left:0;right:0;z-index:300;background:#D4500E;color:white;text-align:center;font-size:12px;font-weight:600;padding:6px;letter-spacing:0.3px}
+.edit-mode-banner.show{display:block}
+.hbtn.edit-active{background:rgba(212,80,14,0.85)!important;border-color:rgba(212,80,14,0.9)!important}
+
+/* Edit modal styles */
+.edit-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.55);z-index:600;align-items:flex-start;justify-content:center;padding:30px 20px;overflow-y:auto}
+.edit-overlay.open{display:flex}
+.edit-modal{background:var(--surface);border-radius:var(--radius-lg);width:100%;max-width:720px;box-shadow:0 20px 60px rgba(0,0,0,0.25);animation:modalIn 0.22s ease;margin:auto}
+.edit-modal-header{padding:20px 24px 16px;display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--border-light);background:#FEF0E8;border-radius:var(--radius-lg) var(--radius-lg) 0 0}
+.edit-modal-title{font-size:16px;font-weight:700;color:#D4500E;flex:1}
+.edit-modal-body{padding:20px 24px;max-height:65vh;overflow-y:auto}
+.edit-person-row{border:1px solid var(--border-light);border-radius:var(--radius);padding:14px;margin-bottom:10px;position:relative;background:#fafbfa}
+.edit-person-row:hover{border-color:var(--border)}
+.edit-person-fields{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px}
+.edit-field{display:flex;flex-direction:column;gap:3px}
+.edit-field label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.6px;color:var(--muted)}
+.edit-field input{border:1px solid var(--border);border-radius:6px;padding:7px 10px;font-size:12.5px;color:var(--text);outline:none;transition:border-color 0.15s;font-family:inherit}
+.edit-field input:focus{border-color:var(--teal);box-shadow:0 0 0 2px rgba(0,77,64,0.1)}
+.edit-person-row .edit-sec-toggle{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted);cursor:pointer}
+.edit-person-row .edit-sec-toggle input{width:14px;height:14px;cursor:pointer}
+.edit-del-btn{position:absolute;top:10px;right:10px;background:none;border:none;color:#ccc;cursor:pointer;font-size:18px;line-height:1;padding:2px 5px;border-radius:4px;transition:all 0.15s}
+.edit-del-btn:hover{background:#fee2e2;color:#dc2626}
+.edit-add-btn{display:flex;align-items:center;gap:6px;background:var(--teal-light);color:var(--teal);border:1.5px dashed var(--teal);border-radius:var(--radius);padding:10px 16px;font-size:12px;font-weight:600;cursor:pointer;width:100%;justify-content:center;transition:all 0.15s;margin-top:4px}
+.edit-add-btn:hover{background:#b2dfdb}
+.edit-modal-footer{padding:14px 24px;border-top:1px solid var(--border-light);display:flex;justify-content:flex-end;gap:8px;background:#fafbfa;border-radius:0 0 var(--radius-lg) var(--radius-lg)}
+.edit-cancel-btn{background:none;border:1px solid var(--border);color:var(--muted);border-radius:8px;padding:8px 18px;font-size:12px;font-weight:600;cursor:pointer;transition:all 0.15s}
+.edit-cancel-btn:hover{background:var(--bg)}
+.edit-save-btn{background:#D4500E;color:white;border:none;border-radius:8px;padding:8px 22px;font-size:12px;font-weight:600;cursor:pointer;transition:all 0.15s}
+.edit-save-btn:hover{background:#b84008}
+.edit-info{font-size:11px;color:var(--muted);background:var(--teal-light);border-radius:7px;padding:8px 12px;margin-bottom:14px;display:flex;align-items:center;gap:6px}
+.edit-sigla-label{font-size:13px;font-weight:800;color:#D4500E;margin-bottom:12px}
+
+/* edit pencil icon on modal */
+.modal-edit-btn{background:var(--orange-light);border:1px solid #f0c8a8;color:#D4500E;border-radius:8px;padding:7px 13px;font-size:12px;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:5px;transition:all 0.15s;white-space:nowrap}
+.modal-edit-btn:hover{background:#fddcbe}
+
+/* export button */
+.export-btn{background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);color:white;padding:7px 13px;border-radius:8px;font-size:12px;cursor:pointer;transition:all 0.15s;display:flex;align-items:center;gap:5px;white-space:nowrap}
+.export-btn:hover{background:rgba(255,255,255,0.22)}
+
+/* ── PRINT ── */
+@media print{
+  .header{position:static!important}
+  .header-right,.hbtn{display:none!important}
+  .search-input{display:none}
+  .card-children{display:block!important}
+  .card-toggle{display:none!important}
+  .org-card{break-inside:avoid}
+  .hero{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .modal-overlay{display:none!important}
+}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1100px){.grid-3{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:800px){.grid-2,.grid-3{grid-template-columns:1fr}.hero{flex-direction:column;align-items:flex-start}.hero-stats{width:100%}.chip{max-width:100%}.main{padding:16px 16px 40px}.header-inner{padding:0 16px}.header-page,.header-year{display:none}.people-table th:nth-child(3),.people-table td:nth-child(3){display:none}}
+@media(max-width:560px){.modal{margin:10px;}.modal-header,.modal-body,.modal-footer{padding-left:16px;padding-right:16px}}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <div class="logo">
+      <div class="logo-box">INEP</div>
+      <div class="logo-info">
+        <div class="logo-title">INEP</div>
+        <div class="logo-sub">Instituto Nacional de Estudos e Pesquisas Educacionais</div>
+      </div>
+    </div>
+    <div class="header-divider"></div>
+    <div class="header-page">Estrutura Organizacional</div>
+    <div class="header-year">2026</div>
+    <div class="header-right">
+      <div class="search-wrap">
+        <svg class="search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input class="search-input" id="q" type="text" placeholder="Buscar unidade, sigla, ramal…" autocomplete="off">
+      </div>
+      <button class="hbtn" id="expandBtn" onclick="toggleAll()">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+        Expandir tudo
+      </button>
+      <button class="hbtn" id="editModeBtn" onclick="toggleEditMode()">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+        Editar
+      </button>
+      <button class="hbtn" id="exportBtn" onclick="exportHTML()" style="display:none">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Salvar HTML
+      </button>
+      <button class="hbtn" onclick="window.print()">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+        Imprimir
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="main">
+
+  <!-- PRESIDÊNCIA -->
+  <div class="hero" style="cursor:pointer" onclick="openModal('PRESIDENCIA')">
+    <div class="hero-left">
+      <div class="hero-eyebrow">Órgão Superior</div>
+      <div class="hero-title">Presidência</div>
+      <div class="hero-ramal">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 10.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 0h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 7.91a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 15.92z"/></svg>
+        Ramais: 3605 · 3606 · 3607 &nbsp;·&nbsp; <span style="opacity:.6;font-size:11px">Clique para ver equipe</span>
+      </div>
+    </div>
+    <div class="hero-stats" id="heroStats"></div>
+  </div>
+
+  <div class="v-connector"><div class="v-connector-line"></div></div>
+
+  <!-- LEGEND -->
+  <div class="legend">
+    <span class="legend-title">Legenda</span>
+    <div class="legend-sep"></div>
+    <div class="legend-item"><div class="legend-dot" style="background:#4A3D8F"></div>Assistência direta ao Presidente</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#4B5563"></div>Órgão colegiado</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#1B6B3A"></div>Órgãos seccionais</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#D4500E"></div>Órgãos específicos singulares</div>
+    <div class="legend-sep"></div>
+    <div class="legend-item" style="color:var(--teal)">
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4m0 4h.01"/></svg>
+      Clique em qualquer área para ver a equipe
+    </div>
+  </div>
+
+  <!-- RESULTS BAR -->
+  <div class="results-bar" id="resultsBar">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    <span id="resultsText"></span>
+    <button class="clear-btn" onclick="clearSearch()">Limpar busca</button>
+  </div>
+
+  <!-- TABS -->
+  <div class="tabs-bar">
+    <button class="tab-btn active" id="tab-org" onclick="switchTab('org')">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+      Organograma
+    </button>
+    <button class="tab-btn" id="tab-tree" onclick="switchTab('tree')">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 3H3"/><path d="M9 3v18"/><path d="M3 9h6"/><path d="M3 15h6"/><path d="M3 21h6"/><path d="M9 12h12"/><path d="M21 12v9"/></svg>
+      Visão em Árvore
+    </button>
+  </div>
+
+  <div class="tab-panel active" id="panel-org">
+
+  <!-- ASSISTÊNCIA DIRETA -->
+  <div class="section" id="sec-assist">
+    <div class="section-header">
+      <div class="section-stripe" style="background:#4A3D8F"></div>
+      <div class="section-name">Assistência direta e imediata ao Presidente</div>
+      <div class="section-count" id="cnt-assist"></div>
+    </div>
+    <div class="chips-row" id="row-assist"></div>
+  </div>
+
+  <!-- COLEGIADO -->
+  <div class="section" id="sec-coleg">
+    <div class="section-header">
+      <div class="section-stripe" style="background:#4B5563"></div>
+      <div class="section-name">Órgão colegiado</div>
+      <div class="section-count" id="cnt-coleg"></div>
+    </div>
+    <div class="chips-row" id="row-coleg"></div>
+  </div>
+
+  <!-- SECCIONAIS -->
+  <div class="section" id="sec-secc">
+    <div class="section-header">
+      <div class="section-stripe" style="background:#1B6B3A"></div>
+      <div class="section-name">Órgãos seccionais</div>
+      <div class="section-count" id="cnt-secc"></div>
+    </div>
+    <div class="grid grid-2" id="grid-secc"></div>
+  </div>
+
+  <!-- ESPECÍFICOS SINGULARES -->
+  <div class="section" id="sec-sing">
+    <div class="section-header">
+      <div class="section-stripe" style="background:#D4500E"></div>
+      <div class="section-name">Órgãos específicos singulares — Diretorias</div>
+      <div class="section-count" id="cnt-sing"></div>
+    </div>
+    <div class="grid grid-3" id="grid-sing"></div>
+  </div>
+
+  </div><!-- /panel-org -->
+
+  <!-- TREE VIEW PANEL -->
+  <div class="tab-panel" id="panel-tree">
+    <div class="tree-wrap" id="treeWrap"></div>
+  </div>
+
+  <div class="footer">
+    <span>INEP — Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira</span>
+    <span>Estrutura Organizacional · 2026</span>
+  </div>
+
+</main>
+
+<!-- ── EDIT MODE BANNER ── -->
+<div class="edit-mode-banner" id="editBanner">✏️ MODO EDIÇÃO ATIVO — Clique em "Ver equipe" em qualquer área para editar. Use "Salvar HTML" para exportar o arquivo atualizado.</div>
+
+<!-- ── EDIT MODAL ── -->
+<div class="edit-overlay" id="editOverlay" onclick="handleEditOverlayClick(event)">
+  <div class="edit-modal">
+    <div class="edit-modal-header">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D4500E" stroke-width="2.5"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+      <div class="edit-modal-title" id="editModalTitle">Editar área</div>
+      <button class="modal-close" onclick="closeEditModal()" style="background:white">×</button>
+    </div>
+    <div class="edit-modal-body">
+      <div class="edit-info">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4m0 4h.01"/></svg>
+        Edite os dados abaixo. As alterações ficam salvas no navegador automaticamente.
+      </div>
+      <div id="editPersonList"></div>
+      <button class="edit-add-btn" onclick="addEditPerson()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        Adicionar pessoa
+      </button>
+    </div>
+    <div class="edit-modal-footer">
+      <button class="edit-cancel-btn" onclick="closeEditModal()">Cancelar</button>
+      <button class="edit-save-btn" onclick="saveEditModal()">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right:4px;vertical-align:middle"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+        Salvar alterações
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ── MODAL ── -->
+<div class="modal-overlay" id="modalOverlay" onclick="handleOverlayClick(event)">
+  <div class="modal" id="modal">
+    <div class="modal-header">
+      <div class="modal-bar" id="modalBar"></div>
+      <div class="modal-info">
+        <div class="modal-eyebrow" id="modalEyebrow"></div>
+        <div class="modal-title" id="modalTitle"></div>
+        <div class="modal-subtitle" id="modalSubtitle"></div>
+        <div class="modal-ramal-badge" id="modalRamal">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 10.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 0h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 7.91a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 15.92z"/></svg>
+          <span id="modalRamalText"></span>
+        </div>
+      </div>
+      <button class="modal-close" onclick="closeModal()">×</button>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+    <div class="modal-footer">
+      <span class="modal-footer-note" id="modalFooterNote"></span>
+      <div style="display:flex;gap:8px">
+        <button class="modal-edit-btn" id="modalEditBtn" onclick="openEditFromModal()" style="display:none">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          Editar equipe
+        </button>
+        <button class="modal-footer-btn" onclick="closeModal()">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ─────────────────────────────────────────
+// DADOS DA ESTRUTURA ORGANIZACIONAL
+// ─────────────────────────────────────────
+const D = {
+  assist:[
+    {s:'GABINETE', n:'Gabinete da Presidência', r:'3606'},
+    {s:'OUVIDORIA', n:'Ouvidoria', r:'3044'},
+    {s:'ASCOM', n:'Assessoria de Comunicação', r:'3630'},
+    {s:'AGGE', n:'Assessoria de Governança e Gestão Estratégica', r:'3682'},
+    {s:'PF-INEP', n:'Procuradoria Federal no INEP', r:'3640'},
+    {s:'AUDIN', n:'Auditoria Interna', r:'3670'},
+    {s:'CORREG', n:'Corregedoria', r:'3625'},
+  ],
+  coleg:[
+    {s:'CONSELHO', n:'Conselho Consultivo', r:'3622'},
+  ],
+  secc:[
+    {s:'DGP', n:'Diretoria de Gestão e Planejamento', r:'3205', kids:[
+      {s:'DAGP', n:'Diretoria Adjunta de Gestão e Planejamento', r:'3201'},
+      {s:'COGEP', n:'Coordenação-Geral de Gestão de Pessoas', r:'3280'},
+      {s:'CGOFC', n:'Coordenação-Geral de Orçamento, Finanças e Contabilidade', r:'3256'},
+      {s:'CGRL', n:'Coordenação-Geral de Recursos Logísticos', r:'3230'},
+      {s:'CGLIC', n:'Coordenação-Geral de Licitações e Contratos', r:'3206'},
+      {s:'CGCAEB', n:'Coordenação-Geral de Contratos de Aplicação para a Educação Básica', r:'3064'},
+      {s:'CGCAES', n:'Coordenação-Geral de Contratos de Aplicação para a Educação Superior', r:'3064'},
+      {s:'CGLAEB', n:'Coordenação-Geral de Logística da Aplicação da Educação Básica', r:'3977'},
+      {s:'CGLAES', n:'Coordenação-Geral de Logística da Aplicação para Educação Superior', r:'3241'},
+    ]},
+    {s:'CETIC', n:'Centro de Tecnologia, Inovação e Ciência de Dados', r:'3505', kids:[
+      {s:'CGGOV', n:'Coordenação-Geral de Governança', r:'3567'},
+      {s:'CGSIEB', n:'Coordenação-Geral de Sistemas da Educação Básica', r:'3578'},
+      {s:'CGSIES', n:'Coordenação-Geral de Sistemas da Educação Superior', r:'3550'},
+      {s:'CGSDE', n:'Coordenação-Geral de Sistemas para Dados Educacionais', r:'3550'},
+      {s:'CGITS', n:'Coordenação-Geral de Infraestrutura Tecnológica e Segurança Cibernética', r:'3780'},
+    ]},
+  ],
+  sing:[
+    {s:'DIRED', n:'Diretoria de Estudos Educacionais', r:'3905', kids:[
+      {s:'CGEP', n:'Coordenação-Geral de Editoração e Publicações', r:'3070'},
+      {s:'CGDI', n:'Coordenação-Geral de Disseminação de Informações', r:'3918'},
+      {s:'CGEE', n:'Coordenação-Geral de Estudos Educacionais', r:'3905'},
+      {s:'CGEFE', n:'Coordenação-Geral de Estudos sobre Financiamento Educacional', r:'3578'},
+    ]},
+    {s:'DEED', n:'Diretoria de Estatísticas Educacionais', r:'3105', kids:[
+      {s:'CGCEB', n:'Coordenação-Geral do Censo Escolar da Educação Básica', r:'3183'},
+      {s:'CGCES', n:'Coordenação-Geral do Censo da Educação Superior', r:'3120'},
+      {s:'CGCQTI', n:'Coordenação-Geral de Controle de Qualidade e Tratamento da Informação', r:'3151'},
+    ]},
+    {s:'DAES', n:'Diretoria de Avaliação da Educação Superior', r:'3410', kids:[
+      {s:'CGAV', n:'Coordenação-Geral de Avaliação in loco', r:'3434'},
+      {s:'CGEES', n:'Coordenação-Geral de Elaboração de Exames da Educação Superior', r:'3450'},
+      {s:'CGAFM', n:'Coordenação-Geral de Avaliação da Formação Médica', r:'3426'},
+      {s:'CGAL', n:'Coordenação-Geral de Avaliação das Licenciaturas', r:'3435'},
+      {s:'CGGIES', n:'Coordenação-Geral de Estatísticas e Indicadores da Educação Superior', r:'3420'},
+    ]},
+    {s:'DAEB', n:'Diretoria de Avaliação da Educação Básica', r:'3305', kids:[
+      {s:'CGSAEB', n:'Coordenação-Geral do Sistema de Avaliação da Educação Básica', r:'3350'},
+      {s:'CGAI', n:'Coordenação-Geral das Avaliações Internacionais, de Articulação e Disseminação', r:'3350'},
+      {s:'CGMEB', n:'Coordenação-Geral de Medidas da Educação Básica', r:'3380'},
+      {s:'CGNEM', n:'Coordenação-Geral do Exame Nacional do Ensino Médio', r:'3320'},
+      {s:'CGCERTB', n:'Coordenação-Geral de Certificação da Educação Básica', r:'3320'},
+    ]},
+    {s:'DAEPT', n:'Diretoria de Avaliação Profissional e Tecnológica', r:'3802', kids:[
+      {s:'CGAIEPT', n:'Coordenação-Geral de Avaliação Institucional da EPT', r:'3053'},
+      {s:'CGECEPT', n:'Coordenação-Geral de Exames e Certificações da EPT', r:'3805'},
+      {s:'CGDIEPT', n:'Coordenação-Geral de Disseminação de Indicadores da EPT', r:'3803'},
+    ]},
+  ],
+};
+
+// ─────────────────────────────────────────
+// PESSOAS POR ÁREA
+// Edite esta seção para cadastrar as pessoas de cada área.
+// Cada área tem uma chave = sigla da área.
+// secretaria: true → destaque especial (secretária da área)
+// ─────────────────────────────────────────
+const PESSOAS = {
+
+  // ── PRESIDÊNCIA ──
+  'PRESIDENCIA': {
+    eyebrow: 'Órgão Superior',
+    pessoas: [
+      { nome: 'Nome do Presidente', cargo: 'Presidente do INEP', email: 'presidente@inep.gov.br', ramal: '3605' },
+      { nome: 'Nome da Secretária', cargo: 'Secretária da Presidência', email: 'secretaria.presidencia@inep.gov.br', ramal: '3606', secretaria: true },
+    ]
+  },
+
+  // ── ASSISTÊNCIA DIRETA ──
+  'GABINETE': {
+    eyebrow: 'Assistência direta ao Presidente',
+    pessoas: [
+      { nome: 'Nome do Chefe de Gabinete', cargo: 'Chefe de Gabinete', email: 'gabinete@inep.gov.br', ramal: '3606' },
+      { nome: 'Nome da Secretária', cargo: 'Secretária do Gabinete', email: 'secretaria.gab@inep.gov.br', ramal: '3606', secretaria: true },
+      { nome: 'Nome do Assessor', cargo: 'Assessor Técnico', email: 'assessor.gab@inep.gov.br', ramal: '3608' },
+    ]
+  },
+  'OUVIDORIA': {
+    eyebrow: 'Assistência direta ao Presidente',
+    pessoas: [
+      { nome: 'Nome do Ouvidor', cargo: 'Ouvidor', email: 'ouvidoria@inep.gov.br', ramal: '3044' },
+      { nome: 'Nome da Secretária', cargo: 'Secretária da Ouvidoria', email: 'sec.ouvidoria@inep.gov.br', ramal: '3044', secretaria: true },
+      { nome: 'Nome do Analista', cargo: 'Analista Técnico em Políticas Sociais', email: 'analista.ouvidoria@inep.gov.br', ramal: '3045' },
+    ]
+  },
+  'ASCOM': {
+    eyebrow: 'Assistência direta ao Presidente',
+    pessoas: [
+      { nome: 'Nome do Assessor de Comunicação', cargo: 'Assessor-Chefe de Comunicação', email: 'ascom@inep.gov.br', ramal: '3630' },
+      { nome: 'Nome da Secretária', cargo: 'Secretária da ASCOM', email: 'sec.ascom@inep.gov.br', ramal: '3630', secretaria: true },
+      { nome: 'Nome do Jornalista', cargo: 'Jornalista', email: 'jornalista@inep.gov.br', ramal: '3631' },
+      { nome: 'Nome do Designer', cargo: 'Designer Gráfico', email: 'design@inep.gov.br', ramal: '3632' },
+    ]
+  },
+  'AGGE': {
+    eyebrow: 'Assistência direta ao Presidente',
+    pessoas: [
+      { nome: 'Nome do Assessor', cargo: 'Assessor-Chefe de Governança e Gestão Estratégica', email: 'agge@inep.gov.br', ramal: '3682' },
+      { nome: 'Nome da Secretária', cargo: 'Secretária da AGGE', email: 'sec.agge@inep.gov.br', ramal: '3682', secretaria: true },
+      { nome: 'Nome do Analista', cargo: 'Analista de Planejamento', email: 'planejamento.agge@inep.gov.br', ramal: '3683' },
+    ]
+  },
+  'PF-INEP': {
+    eyebrow: 'Assistência direta ao Presidente',
+    pessoas: [
+      { nome: 'Nome do Procurador', cargo: 'Procurador-Chefe Federal no INEP', email: 'pf.inep@agu.gov.br', ramal: '3640' },
+      { nome: 'Nome da Secretária', cargo: 'Secretária da PF-INEP', email: 'sec.pfinep@inep.gov.br', ramal: '3640', secretaria: true },
+      { nome: 'Nome do Procurador', cargo: 'Procurador Federal', email: 'procurador@inep.gov.br', ramal: '3641' },
+      { nome: 'Nome do Procurador', cargo: 'Procurador Federal', email: 'procurador2@inep.gov.br', ramal: '3642' },
+    ]
+  },
+  'AUDIN': {
+    eyebrow: 'Assistência direta ao Presidente',
+    pessoas: [
+      { nome: 'Nome do Auditor-Chefe', cargo: 'Auditor-Chefe Interno', email: 'audin@inep.gov.br', ramal: '3670' },
+      { nome: 'Nome da Secretária', cargo: 'Secretária da AUDIN', email: 'sec.audin@inep.gov.br', ramal: '3670', secretaria: true },
+      { nome: 'Nome do Auditor', cargo: 'Auditor Interno', email: 'auditor@inep.gov.br', ramal: '3671' },
+      { nome: 'Nome do Auditor', cargo: 'Auditor Interno', email: 'auditor2@inep.gov.br', ramal: '3672' },
+    ]
+  },
+  'CORREG': {
+    eyebrow: 'Assistência direta ao Presidente',
+    pessoas: [
+      { nome: 'Nome do Corregedor', cargo: 'Corregedor', email: 'correg@inep.gov.br', ramal: '3625' },
+      { nome: 'Nome da Secretária', cargo: 'Secretária da CORREG', email: 'sec.correg@inep.gov.br', ramal: '3625', secretaria: true },
+      { nome: 'Nome do Analista', cargo: 'Analista Técnico em Políticas Sociais', email: 'analista.correg@inep.gov.br', ramal: '3626' },
+    ]
+  },
+
+  // ── COLEGIADO ──
+  'CONSELHO': {
+    eyebrow: 'Órgão Colegiado',
+    pessoas: [
+      { nome: 'Nome do Presidente do Conselho', cargo: 'Presidente do Conselho Consultivo', email: 'conselho@inep.gov.br', ramal: '3622' },
+      { nome: 'Nome da Secretária', cargo: 'Secretária do Conselho', email: 'sec.conselho@inep.gov.br', ramal: '3622', secretaria: true },
+      { nome: 'Nome do Conselheiro', cargo: 'Conselheiro', email: 'conselheiro@inep.gov.br', ramal: '3623' },
+    ]
+  },
+
+  // ── DGP ──
+  'DGP': {
+    eyebrow: 'Diretoria — Órgão Seccional',
+    pessoas: [
+      { nome: 'Nome do Diretor', cargo: 'Diretor de Gestão e Planejamento', email: 'dgp@inep.gov.br', ramal: '3205' },
+      { nome: 'Nome da Secretária', cargo: 'Secretária da DGP', email: 'sec.dgp@inep.gov.br', ramal: '3205', secretaria: true },
+    ]
+  },
+  'DAGP': {
+    eyebrow: 'Diretoria Adjunta — DGP',
+    pessoas: [
+      { nome: 'Nome do Diretor Adjunto', cargo: 'Diretor Adjunto de Gestão e Planejamento', email: 'dagp@inep.gov.br', ramal: '3201' },
+      { nome: 'Nome da Secretária', cargo: 'Secretária da DAGP', email: 'sec.dagp@inep.gov.br', ramal: '3201', secretaria: true },
+    ]
+  },
+  'COGEP': {
+    eyebrow: 'Coordenação-Geral — DGP',
+    pessoas: [
+      { nome: 'Nome do Coordenador-Geral', cargo: 'Coordenador-Geral de Gestão de Pessoas', email: 'cogep@inep.gov.br', ramal: '3280' },
+      { nome: 'Nome da Secretária', cargo: 'Secretária da COGEP', email: 'sec.cogep@inep.gov.br', ramal: '3280', secretaria: true },
+      { nome: 'Nome do Coordenador', cargo: 'Coordenador de Desenvolvimento de Pessoas', email: 'coord.cogep@inep.gov.br', ramal: '3281' },
+    ]
+  },
+  'CGOFC': {
+    eyebrow: 'Coordenação-Geral — DGP',
+    pessoas: [
+      { nome: 'Nome do Coordenador-Geral', cargo: 'Coordenador-Geral de Orçamento, Finanças e Contabilidade', email: 'cgofc@inep.gov.br', ramal: '3256' },
+      { nome: 'Nome da Secretária', cargo: 'Secretária da CGOFC', email: 'sec.cgofc@inep.gov.br', ramal: '3256', secretaria: true },
+    ]
+  },
+  'CGRL': {
+    eyebrow: 'Coordenação-Geral — DGP',
+    pessoas: [
+      { nome: 'Nome do Coordenador-Geral', cargo: 'Coordenador-Geral de Recursos Logísticos', email: 'cgrl@inep.gov.br', ramal: '3230' },
+      { nome: 'Nome da Secretária', cargo: 'Secretária da CGRL', email: 'sec.cgrl@inep.gov.br', ramal: '3230', secretaria: true },
+    ]
+  },
+  'CGLIC': {
+    eyebrow: 'Coordenação-Geral — DGP',
+    pessoas: [
+      { nome: 'Nome do Coordenador-Geral', cargo: 'Coordenador-Geral de Licitações e Contratos', email: 'cglic@inep.gov.br', ramal: '3206' },
+      { nome: 'Nome da Secretária', cargo: 'Secretária da CGLIC', email: 'sec.cglic@inep.gov.br', ramal: '3206', secretaria: true },
+    ]
+  },
+  'CGCAEB': {
+    eyebrow: 'Coordenação-Geral — DGP',
+    pessoas: [
+      { nome: 'Nome do Coordenador-Geral', cargo: 'Coordenador-Geral de Contratos de Aplicação para a Educação Básica', email: 'cgcaeb@inep.gov.br', ramal: '3064' },
+      { nome: 'Nome da Secretária', cargo: 'Secretária da CGCAEB', email: 'sec.cgcaeb@inep.gov.br', ramal: '3064', secretaria: true },
+    ]
+  },
+  'CGCAES': {
+    eyebrow: 'Coordenação-Geral — DGP',
+    pessoas: [
+      { nome: 'Nome do Coordenador-Geral', cargo: 'Coordenador-Geral de Contratos de Aplicação para a Educação Superior', email: 'cgcaes@inep.gov.br', ramal: '3064' },
+      { nome: 'Nome da Secretária', cargo: 'Secretária da CGCAES', email: 'sec.cgcaes@inep.gov.br', ramal: '3064', secretaria: true },
+    ]
+  },
+  'CGLAEB': {
+    eyebrow: 'Coordenação-Geral — DGP',
+    pessoas: [
+      { nome: 'Nome do Coordenador-Geral', cargo: 'Coordenador-Geral de Logística da Aplicação da Educação Básica', email: 'cglaeb@inep.gov.br', ramal: '3977' },
+      { nome: 'Nome da Secretária', cargo: 'Secretária da CGLAEB', email: 'sec.cglaeb@inep.gov.br', ramal: '3977', secretaria: true },
+    ]
+  },
+  'CGLAES': {
+    eyebrow: 'Coordenação-Geral — DGP',
+    pessoas: [
+      { nome: 'Nome do Coordenador-Geral', cargo: 'Coordenador-Geral de Logística da Aplicação para Educação Superior', email: 'cglaes@inep.gov.br', ramal: '3241' },
+      { nome: 'Nome da Secretária', cargo: 'Secretária da CGLAES', email: 'sec.cglaes@inep.gov.br', ramal: '3241', secretaria: true },
+    ]
+  },
+
+  // ── CETIC ──
+  'CETIC': {
+    eyebrow: 'Centro — Órgão Seccional',
+    pessoas: [
+      { nome: 'Nome do Diretor', cargo: 'Diretor do CETIC', email: 'cetic@inep.gov.br', ramal: '3505' },
+      { nome: 'Nome da Secretária', cargo: 'Secretária do CETIC', email: 'sec.cetic@inep.gov.br', ramal: '3505', secretaria: true },
+    ]
+  },
+  'CGGOV': {
+    eyebrow: 'Coordenação-Geral — CETIC',
+    pessoas: [
+      { nome: 'Nome do Coordenador-Geral', cargo: 'Coordenador-Geral de Governança', email: 'cggov@inep.gov.br', ramal: '3567' },
+      { nome: 'Nome da Secretária', cargo: 'Secretária da CGGOV', email: 'sec.cggov@inep.gov.br', ramal: '3567', secretaria: true },
+    ]
+  },
+  'CGSIEB': {
+    eyebrow: 'Coordenação-Geral — CETIC',
+    pessoas: [
+      { nome: 'Nome do Coordenador-Geral', cargo: 'Coordenador-Geral de Sistemas da Educação Básica', email: 'cgsieb@inep.gov.br', ramal: '3578' },
+      { nome: 'Nome da Secretária', cargo: 'Secretária da CGSIEB', email: 'sec.cgsieb@inep.gov.br', ramal: '3578', secretaria: true },
+    ]
+  },
+  'CGSIES': {
+    eyebrow: 'Coordenação-Geral — CETIC',
+    pessoas: [
+      { nome: 'Nome do Coordenador-Geral', cargo: 'Coordenador-Geral de Sistemas da Educação Superior', email: 'cgsies@inep.gov.br', ramal: '3550' },
+      { nome: 'Nome da Secretária', cargo: 'Secretária da CGSIES', email: 'sec.cgsies@inep.gov.br', ramal: '3550', secretaria: true },
+    ]
+  },
+  'CGSDE': {
+    eyebrow: 'Coordenação-Geral — CETIC',
+    pessoas: [
+      { nome: 'Nome do Coordenador-Geral', cargo: 'Coordenador-Geral de Sistemas para Dados Educacionais', email: 'cgsde@inep.gov.br', ramal: '3550' },
+      { nome: 'Nome da Secretária', cargo: 'Secretária da CGSDE', email: 'sec.cgsde@inep.gov.br', ramal: '3550', secretaria: true },
+    ]
+  },
+  'CGITS': {
+    eyebrow: 'Coordenação-Geral — CETIC',
+    pessoas: [
+      { nome: 'Nome do Coordenador-Geral', cargo: 'Coordenador-Geral de Infraestrutura Tecnológica e Segurança Cibernética', email: 'cgits@inep.gov.br', ramal: '3780' },
+      { nome: 'Nome da Secretária', cargo: 'Secretária da CGITS', email: 'sec.cgits@inep.gov.br', ramal: '3780', secretaria: true },
+    ]
+  },
+
+  // ── DIRED ──
+  'DIRED': {
+    eyebrow: 'Diretoria — Órgão Específico Singular',
+    pessoas: [
+      { nome: 'Nome do Diretor', cargo: 'Diretor de Estudos Educacionais', email: 'dired@inep.gov.br', ramal: '3905' },
+      { nome: 'Nome da Secretária', cargo: 'Secretária da DIRED', email: 'sec.dired@inep.gov.br', ramal: '3905', secretaria: true },
+    ]
+  },
+  'CGEP': {
+    eyebrow: 'Coordenação-Geral — DIRED',
+    pessoas: [
+      { nome: 'Nome do Coordenador-Geral', cargo: 'Coordenador-Geral de Editoração e Publicações', email: 'cgep@inep.gov.br', ramal: '3070' },
+      { nome: 'Nome da Secretária', cargo: 'Secretária da CGEP', email: 'sec.cgep@inep.gov.br', ramal: '3070', secretaria: true },
+    ]
+  },
+  'CGDI': {
+    eyebrow: 'Coordenação-Geral — DIRED',
+    pessoas: [
+      { nome: 'Nome do Coordenador-Geral', cargo: 'Coordenador-Geral de Disseminação de Informações', email: 'cgdi@inep.gov.br', ramal: '3918' },
+      { nome: 'Nome da Secretária', cargo: 'Secretária da CGDI', email: 'sec.cgdi@inep.gov.br', ramal: '3918', secretaria: true },
+    ]
+  },
+  'CGEE': {
+    eyebrow: 'Coordenação-Geral — DIRED',
+    pessoas: [
+      { nome: 'Nome do Coordenador-Geral', cargo: 'Coordenador-Geral de Estudos Educacionais', email: 'cgee@inep.gov.br', ramal: '3905' },
+      { nome: 'Nome da Secretária', cargo: 'Secretária da CGEE', email: 'sec.cgee@inep.gov.br', ramal: '3905', secretaria: true },
+    ]
+  },
+  'CGEFE': {
+    eyebrow: 'Coordenação-Geral — DIRED',
+    pessoas: [
+      { nome: 'Nome do Coordenador-Geral', cargo: 'Coordenador-Geral de Estudos sobre Financiamento Educacional', email: 'cgefe@inep.gov.br', ramal: '3578' },
+      { nome: 'Nome da Secretária', cargo: 'Secretária da CGEFE', email: 'sec.cgefe@inep.gov.br', ramal: '3578', secretaria: true },
+    ]
+  },
+
+  // ── DEED ──
+  'DEED': {
+    eyebrow: 'Diretoria — Órgão Específico Singular',
+    pessoas: [
+      { nome: 'Nome do Diretor', cargo: 'Diretor de Estatísticas Educacionais', email: 'deed@inep.gov.br', ramal: '3105' },
+      { nome: 'Nome da Secretária', cargo: 'Secretária da DEED', email: 'sec.deed@inep.gov.br', ramal: '3105', secretaria: true },
+    ]
+  },
+  'CGCEB': {
+    eyebrow: 'Coordenação-Geral — DEED',
+    pessoas: [
+      { nome: 'Nome do Coordenador-Geral', cargo: 'Coordenador-Geral do Censo Escolar da Educação Básica', email: 'cgceb@inep.gov.br', ramal: '3183' },
+      { nome: 'Nome da Secretária', cargo: 'Secretária da CGCEB', email: 'sec.cgceb@inep.gov.br', ramal: '3183', secretaria: true },
+    ]
+  },
+  'CGCES': {
+    eyebrow: 'Coordenação-Geral — DEED',
+    pessoas: [
+      { nome: 'Nome do Coordenador-Geral', cargo: 'Coordenador-Geral do Censo da Educação Superior', email: 'cgces@inep.gov.br', ramal: '3120' },
+      { nome: 'Nome da Secretária', cargo: 'Secretária da CGCES', email: 'sec.cgces@inep.gov.br', ramal: '3120', secretaria: true },
+    ]
+  },
+  'CGCQTI': {
+    eyebrow: 'Coordenação-Geral — DEED',
+    pessoas: [
+      { nome: 'Nome do Coordenador-Geral', cargo: 'Coordenador-Geral de Controle de Qualidade e Tratamento da Informação', email: 'cgcqti@inep.gov.br', ramal: '3151' },
+      { nome: 'Nome da Secretária', cargo: 'Secretária da CGCQTI', email: 'sec.cgcqti@inep.gov.br', ramal: '3151', secretaria: true },
+    ]
+  },
+
+  // ── DAES ──
+  'DAES': {
+    eyebrow: 'Diretoria — Órgão Específico Singular',
+    pessoas: [
+      { nome: 'Nome do Diretor', cargo: 'Diretor de Avaliação da Educação Superior', email: 'daes@inep.gov.br', ramal: '3410' },
+      { nome: 'Nome da Secretária', cargo: 'Secretária da DAES', email: 'sec.daes@inep.gov.br', ramal: '3410', secretaria: true },
+    ]
+  },
+  'CGAV': {
+    eyebrow: 'Coordenação-Geral — DAES',
+    pessoas: [
+      { nome: 'Nome do Coordenador-Geral', cargo: 'Coordenador-Geral de Avaliação in loco', email: 'cgav@inep.gov.br', ramal: '3434' },
+      { nome: 'Nome da Secretária', cargo: 'Secretária da CGAV', email: 'sec.cgav@inep.gov.br', ramal: '3434', secretaria: true },
+    ]
+  },
+  'CGEES': {
+    eyebrow: 'Coordenação-Geral — DAES',
+    pessoas: [
+      { nome: 'Nome do Coordenador-Geral', cargo: 'Coordenador-Geral de Elaboração de Exames da Educação Superior', email: 'cgees@inep.gov.br', ramal: '3450' },
+      { nome: 'Nome da Secretária', cargo: 'Secretária da CGEES', email: 'sec.cgees@inep.gov.br', ramal: '3450', secretaria: true },
+    ]
+  },
+  'CGAFM': {
+    eyebrow: 'Coordenação-Geral — DAES',
+    pessoas: [
+      { nome: 'Nome do Coordenador-Geral', cargo: 'Coordenador-Geral de Avaliação da Formação Médica', email: 'cgafm@inep.gov.br', ramal: '3426' },
+      { nome: 'Nome da Secretária', cargo: 'Secretária da CGAFM', email: 'sec.cgafm@inep.gov.br', ramal: '3426', secretaria: true },
+    ]
+  },
+  'CGAL': {
+    eyebrow: 'Coordenação-Geral — DAES',
+    pessoas: [
+      { nome: 'Nome do Coordenador-Geral', cargo: 'Coordenador-Geral de Avaliação das Licenciaturas', email: 'cgal@inep.gov.br', ramal: '3435' },
+      { nome: 'Nome da Secretária', cargo: 'Secretária da CGAL', email: 'sec.cgal@inep.gov.br', ramal: '3435', secretaria: true },
+    ]
+  },
+  'CGGIES': {
+    eyebrow: 'Coordenação-Geral — DAES',
+    pessoas: [
+      { nome: 'Nome do Coordenador-Geral', cargo: 'Coordenador-Geral de Estatísticas e Indicadores da Educação Superior', email: 'cggies@inep.gov.br', ramal: '3420' },
+      { nome: 'Nome da Secretária', cargo: 'Secretária da CGGIES', email: 'sec.cggies@inep.gov.br', ramal: '3420', secretaria: true },
+    ]
+  },
+
+  // ── DAEB ──
+  'DAEB': {
+    eyebrow: 'Diretoria — Órgão Específico Singular',
+    pessoas: [
+      { nome: 'Nome do Diretor', cargo: 'Diretor de Avaliação da Educação Básica', email: 'daeb@inep.gov.br', ramal: '3305' },
+      { nome: 'Nome da Secretária', cargo: 'Secretária da DAEB', email: 'sec.daeb@inep.gov.br', ramal: '3305', secretaria: true },
+    ]
+  },
+  'CGSAEB': {
+    eyebrow: 'Coordenação-Geral — DAEB',
+    pessoas: [
+      { nome: 'Nome do Coordenador-Geral', cargo: 'Coordenador-Geral do Sistema de Avaliação da Educação Básica', email: 'cgsaeb@inep.gov.br', ramal: '3350' },
+      { nome: 'Nome da Secretária', cargo: 'Secretária da CGSAEB', email: 'sec.cgsaeb@inep.gov.br', ramal: '3350', secretaria: true },
+    ]
+  },
+  'CGAI': {
+    eyebrow: 'Coordenação-Geral — DAEB',
+    pessoas: [
+      { nome: 'Nome do Coordenador-Geral', cargo: 'Coordenador-Geral das Avaliações Internacionais', email: 'cgai@inep.gov.br', ramal: '3350' },
+      { nome: 'Nome da Secretária', cargo: 'Secretária da CGAI', email: 'sec.cgai@inep.gov.br', ramal: '3350', secretaria: true },
+    ]
+  },
+  'CGMEB': {
+    eyebrow: 'Coordenação-Geral — DAEB',
+    pessoas: [
+      { nome: 'Nome do Coordenador-Geral', cargo: 'Coordenador-Geral de Medidas da Educação Básica', email: 'cgmeb@inep.gov.br', ramal: '3380' },
+      { nome: 'Nome da Secretária', cargo: 'Secretária da CGMEB', email: 'sec.cgmeb@inep.gov.br', ramal: '3380', secretaria: true },
+    ]
+  },
+  'CGNEM': {
+    eyebrow: 'Coordenação-Geral — DAEB',
+    pessoas: [
+      { nome: 'Nome do Coordenador-Geral', cargo: 'Coordenador-Geral do Exame Nacional do Ensino Médio', email: 'cgnem@inep.gov.br', ramal: '3320' },
+      { nome: 'Nome da Secretária', cargo: 'Secretária da CGNEM', email: 'sec.cgnem@inep.gov.br', ramal: '3320', secretaria: true },
+    ]
+  },
+  'CGCERTB': {
+    eyebrow: 'Coordenação-Geral — DAEB',
+    pessoas: [
+      { nome: 'Nome do Coordenador-Geral', cargo: 'Coordenador-Geral de Certificação da Educação Básica', email: 'cgcertb@inep.gov.br', ramal: '3320' },
+      { nome: 'Nome da Secretária', cargo: 'Secretária da CGCERTB', email: 'sec.cgcertb@inep.gov.br', ramal: '3320', secretaria: true },
+    ]
+  },
+
+  // ── DAEPT ──
+  'DAEPT': {
+    eyebrow: 'Diretoria — Órgão Específico Singular',
+    pessoas: [
+      { nome: 'Nome do Diretor', cargo: 'Diretor de Avaliação Profissional e Tecnológica', email: 'daept@inep.gov.br', ramal: '3802' },
+      { nome: 'Nome da Secretária', cargo: 'Secretária da DAEPT', email: 'sec.daept@inep.gov.br', ramal: '3802', secretaria: true },
+    ]
+  },
+  'CGAIEPT': {
+    eyebrow: 'Coordenação-Geral — DAEPT',
+    pessoas: [
+      { nome: 'Nome do Coordenador-Geral', cargo: 'Coordenador-Geral de Avaliação Institucional da EPT', email: 'cgaiept@inep.gov.br', ramal: '3053' },
+      { nome: 'Nome da Secretária', cargo: 'Secretária da CGAIEPT', email: 'sec.cgaiept@inep.gov.br', ramal: '3053', secretaria: true },
+    ]
+  },
+  'CGECEPT': {
+    eyebrow: 'Coordenação-Geral — DAEPT',
+    pessoas: [
+      { nome: 'Nome do Coordenador-Geral', cargo: 'Coordenador-Geral de Exames e Certificações da EPT', email: 'cgecept@inep.gov.br', ramal: '3805' },
+      { nome: 'Nome da Secretária', cargo: 'Secretária da CGECEPT', email: 'sec.cgecept@inep.gov.br', ramal: '3805', secretaria: true },
+    ]
+  },
+  'CGDIEPT': {
+    eyebrow: 'Coordenação-Geral — DAEPT',
+    pessoas: [
+      { nome: 'Nome do Coordenador-Geral', cargo: 'Coordenador-Geral de Disseminação de Indicadores da EPT', email: 'cgdiept@inep.gov.br', ramal: '3803' },
+      { nome: 'Nome da Secretária', cargo: 'Secretária da CGDIEPT', email: 'sec.cgdiept@inep.gov.br', ramal: '3803', secretaria: true },
+    ]
+  },
+};
+
+// ─────────────────────────────────────────
+// LOOK UP NOME COMPLETO DA ÁREA
+// ─────────────────────────────────────────
+function getAreaInfo(sigla) {
+  // Check all items in D
+  const allItems = [
+    ...D.assist,
+    ...D.coleg,
+    ...D.secc,
+    ...D.secc.flatMap(i=>i.kids||[]),
+    ...D.sing,
+    ...D.sing.flatMap(i=>i.kids||[]),
+  ];
+  const item = allItems.find(i=>i.s===sigla);
+  return item || null;
+}
+
+// ─────────────────────────────────────────
+// MODAL
+// ─────────────────────────────────────────
+function openModal(sigla, color) {
+  currentEditSigla = sigla;
+  const data = PESSOAS[sigla];
+  const info = getAreaInfo(sigla);
+  const overlay = document.getElementById('modalOverlay');
+  const barColor = color || '#004D40';
+
+  // Resolve name/ramal from structure or special case
+  let nomeArea = sigla;
+  let ramalArea = '';
+  if (sigla === 'PRESIDENCIA') {
+    nomeArea = 'Presidência';
+    ramalArea = '3605 · 3606 · 3607';
+  } else if (info) {
+    nomeArea = info.n;
+    ramalArea = info.r;
+  }
+
+  document.getElementById('modalBar').style.background = barColor;
+  document.getElementById('modalEyebrow').textContent = data ? data.eyebrow : '';
+  document.getElementById('modalTitle').textContent = sigla === 'PRESIDENCIA' ? 'Presidência' : sigla;
+  document.getElementById('modalSubtitle').textContent = nomeArea === sigla ? '' : nomeArea;
+  document.getElementById('modalRamalText').textContent = 'Ramal: ' + ramalArea;
+
+  const body = document.getElementById('modalBody');
+
+  if (!data || !data.pessoas || data.pessoas.length === 0) {
+    body.innerHTML = `<div class="empty-state"><div class="empty-state-icon">👥</div><p>Nenhuma pessoa cadastrada para esta área.<br>Edite o arquivo HTML para adicionar a equipe.</p></div>`;
+  } else {
+    const rows = data.pessoas.map(p => `
+      <tr class="${p.secretaria?'secretaria-row':''}">
+        <td>
+          <div class="person-name">${p.nome}${p.secretaria?'<span class="secretaria-badge">Secretaria</span>':''}</div>
+          <div class="person-role">${p.cargo}</div>
+        </td>
+        <td>
+          <div class="person-email">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <a href="mailto:${p.email}">${p.email}</a>
+          </div>
+        </td>
+        <td>
+          <div class="person-ramal">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 10.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 0h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 7.91a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 15.92z"/></svg>
+            ${p.ramal}
+          </div>
+        </td>
+      </tr>
+    `).join('');
+
+    body.innerHTML = `
+      <div class="modal-section-title">Equipe (${data.pessoas.length} pessoa${data.pessoas.length!==1?'s':''})</div>
+      <table class="people-table">
+        <thead>
+          <tr>
+            <th>Nome / Cargo</th>
+            <th>E-mail</th>
+            <th>Ramal</th>
+          </tr>
+        </thead>
+        <tbody>${rows}</tbody>
+      </table>`;
+  }
+
+  document.getElementById('modalFooterNote').textContent = `${sigla} · ${data && data.pessoas ? data.pessoas.length : 0} pessoa(s) cadastrada(s)`;
+  const editBtn = document.getElementById('modalEditBtn');
+  if (editBtn) editBtn.style.display = editMode ? 'flex' : 'none';
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  document.getElementById('modalOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function handleOverlayClick(e) {
+  if (e.target === document.getElementById('modalOverlay')) closeModal();
+}
+
+document.addEventListener('keydown', e => { if(e.key==='Escape') closeModal(); });
+
+// ─────────────────────────────────────────
+// COLORS
+// ─────────────────────────────────────────
+const COLORS={assist:'#4A3D8F',coleg:'#4B5563',secc:'#1B6B3A',sing:'#D4500E'};
+const LIGHT={assist:'#EEECF9',coleg:'#F3F4F6',secc:'#E8F5EE',sing:'#FEF0E8'};
+
+function phoneIcon(size=11){return`<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 10.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 0h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 7.91a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 15.92z"/></svg>`}
+function chevronIcon(){return`<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>`}
+function arrowIcon(){return`<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>`}
+
+function idx(item){
+  const email = getMainEmail(item.s) || '';
+  return(item.s+' '+item.n+' '+item.r+' '+email+(item.kids?item.kids.map(k=>k.s+' '+k.n+' '+k.r+(getMainEmail(k.s)||'')).join(' '):'')).toLowerCase();
+}
+
+function getMainEmail(sigla) {
+  const p = PESSOAS[sigla];
+  if (!p || !p.pessoas || p.pessoas.length === 0) return null;
+  // Find the first non-secretary person
+  const main = p.pessoas.find(x => !x.secretaria) || p.pessoas[0];
+  return main ? main.email : null;
+}
+
+function emailIcon(size=10){return`<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>`}
+
+function renderChips(containerId,items,color){
+  const c=document.getElementById(containerId);
+  items.forEach(item=>{
+    const el=document.createElement('div');
+    el.className='chip';
+    el.style.borderLeftColor=color;
+    el.dataset.idx=idx(item);
+    const email = getMainEmail(item.s);
+    el.innerHTML=`
+      <div class="chip-sigla" style="color:${color}">${item.s}</div>
+      <div class="chip-name">${item.n}</div>
+      <div class="chip-ramal">${phoneIcon()} Ramal: ${item.r}</div>
+      ${email?`<div class="chip-email">${emailIcon()} <a href="mailto:${email}" onclick="event.stopPropagation()">${email}</a></div>`:''}
+      <div class="chip-link" style="color:${color}">${arrowIcon()} Ver equipe</div>`;
+    el.addEventListener('click',()=>openModal(item.s, color));
+    c.appendChild(el);
+  });
+}
+
+function renderCards(containerId,items,color,lightColor){
+  const c=document.getElementById(containerId);
+  items.forEach(item=>{
+    const card=document.createElement('div');
+    card.className='org-card';
+    card.dataset.idx=idx(item);
+    const email = getMainEmail(item.s);
+
+    const kidsHtml=item.kids?item.kids.map(k=>{
+      const kEmail = getMainEmail(k.s);
+      return`
+      <div class="child" data-sigla="${k.s}" data-color="${color}">
+        <div class="child-dot" style="background:${color};margin-top:5px"></div>
+        <div class="child-sigla" style="color:${color}">${k.s}</div>
+        <div style="flex:1;min-width:0">
+          <div class="child-name">${k.n}</div>
+          ${kEmail?`<div class="child-email">${emailIcon(9)} <a href="mailto:${kEmail}" onclick="event.stopPropagation()">${kEmail}</a></div>`:''}
+        </div>
+        <div class="child-ramal">${phoneIcon(10)} ${k.r}</div>
+        <div class="child-arrow">${arrowIcon()}</div>
+      </div>`;
+    }).join(''):'';
+
+    card.innerHTML=`
+      <div class="card-header">
+        <div class="card-bar" style="background:${color}"></div>
+        <div class="card-body">
+          <div class="card-sigla" style="color:${color}">${item.s}</div>
+          <div class="card-name">${item.n}</div>
+          <div class="card-meta">
+            <div class="card-ramal">${phoneIcon()} Ramal: ${item.r}</div>
+            ${item.kids?`<span class="card-badge" style="background:${lightColor};color:${color}">${item.kids.length} unidades</span>`:''}
+            <button class="card-view-btn" data-sigla="${item.s}" data-color="${color}">${arrowIcon()} Ver equipe</button>
+          </div>
+          ${email?`<div class="card-email">${emailIcon()} <a href="mailto:${email}" onclick="event.stopPropagation()">${email}</a></div>`:''}
+        </div>
+        ${item.kids?`<div class="card-toggle">${chevronIcon()}</div>`:''}
+      </div>
+      ${item.kids?`<div class="card-children">${kidsHtml}</div>`:''}`;
+
+    if(item.kids){
+      card.querySelector('.card-header').addEventListener('click',(e)=>{
+        if(e.target.closest('.card-view-btn')) return;
+        card.classList.toggle('expanded');
+      });
+    }
+
+    // View button on card header
+    card.querySelector('.card-view-btn').addEventListener('click',(e)=>{
+      e.stopPropagation();
+      openModal(item.s, color);
+    });
+
+    // Click on child rows
+    if(item.kids){
+      card.querySelectorAll('.child').forEach(ch=>{
+        ch.addEventListener('click',()=>{
+          openModal(ch.dataset.sigla, ch.dataset.color);
+        });
+      });
+    }
+
+    c.appendChild(card);
+  });
+}
+
+// Stats
+function buildStats(){
+  const total=D.assist.length+D.coleg.length+
+    D.secc.reduce((a,i)=>a+(i.kids?i.kids.length:0),0)+D.secc.length+
+    D.sing.reduce((a,i)=>a+(i.kids?i.kids.length:0),0)+D.sing.length;
+  const diretorias=D.secc.length+D.sing.length;
+  const coords=D.secc.reduce((a,i)=>a+(i.kids?i.kids.length:0),0)+D.sing.reduce((a,i)=>a+(i.kids?i.kids.length:0),0);
+  document.getElementById('heroStats').innerHTML=`
+    <div class="stat-pill"><div class="stat-num">${diretorias}</div><div class="stat-label">Diretorias</div></div>
+    <div class="stat-pill"><div class="stat-num">${coords}</div><div class="stat-label">Coordenações-Gerais</div></div>
+    <div class="stat-pill"><div class="stat-num">${total}</div><div class="stat-label">Unidades total</div></div>`;
+}
+
+function setCounts(){
+  document.getElementById('cnt-assist').textContent=D.assist.length;
+  document.getElementById('cnt-coleg').textContent=D.coleg.length;
+  document.getElementById('cnt-secc').textContent=D.secc.length;
+  document.getElementById('cnt-sing').textContent=D.sing.length;
+}
+
+let allExpanded=false;
+function toggleAll(){
+  allExpanded=!allExpanded;
+  document.querySelectorAll('.org-card').forEach(c=>{
+    if(allExpanded)c.classList.add('expanded');
+    else c.classList.remove('expanded');
+  });
+  document.getElementById('expandBtn').textContent=allExpanded?'Recolher tudo':'Expandir tudo';
+}
+
+function clearSearch(){
+  document.getElementById('q').value='';
+  document.getElementById('q').dispatchEvent(new Event('input'));
+}
+
+document.getElementById('q').addEventListener('input',function(){
+  const q=this.value.toLowerCase().trim();
+  const bar=document.getElementById('resultsBar');
+  if(!q){
+    bar.classList.remove('show');
+    document.querySelectorAll('.chip,.org-card').forEach(el=>{el.classList.remove('hidden')});
+    ['sec-assist','sec-coleg','sec-secc','sec-sing'].forEach(id=>{document.getElementById(id).classList.remove('hidden')});
+    return;
+  }
+  let count=0;
+  document.querySelectorAll('.chip').forEach(el=>{
+    const m=el.dataset.idx.includes(q);
+    el.classList.toggle('hidden',!m);
+    if(m)count++;
+  });
+  document.querySelectorAll('.org-card').forEach(el=>{
+    const m=el.dataset.idx.includes(q);
+    el.classList.toggle('hidden',!m);
+    if(m){count++;el.classList.add('expanded')}
+  });
+  [['row-assist','sec-assist'],['row-coleg','sec-coleg'],['grid-secc','sec-secc'],['grid-sing','sec-sing']].forEach(([g,s])=>{
+    const container=document.getElementById(g);
+    const hasVisible=[...container.children].some(c=>!c.classList.contains('hidden'));
+    document.getElementById(s).classList.toggle('hidden',!hasVisible);
+  });
+  bar.classList.add('show');
+  document.getElementById('resultsText').textContent=`${count} resultado${count!==1?'s':''} encontrado${count!==1?'s':''} para "${this.value}"`;
+});
+
+// ─────────────────────────────────────────
+// TAB SWITCHING
+// ─────────────────────────────────────────
+function switchTab(name) {
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.toggle('active', b.id==='tab-'+name));
+  document.querySelectorAll('.tab-panel').forEach(p=>p.classList.toggle('active', p.id==='panel-'+name));
+  if(name==='tree' && !document.getElementById('treeWrap').hasChildNodes()) buildTree();
+}
+
+// ─────────────────────────────────────────
+// TREE VIEW
+// ─────────────────────────────────────────
+function buildTree() {
+  const wrap = document.getElementById('treeWrap');
+  wrap.innerHTML = '';
+
+  function treeRow(item, color, isRoot=false) {
+    const email = getMainEmail(item.s);
+    const hasKids = item.kids && item.kids.length > 0;
+    const div = document.createElement('div');
+    div.className = 'tree-item';
+
+    const row = document.createElement('div');
+    row.className = 'tree-row' + (isRoot ? ' tree-root-row' : '');
+
+    if (!isRoot) {
+      if (hasKids) {
+        row.innerHTML += `<div class="tree-toggle-icon" id="ti-${item.s}"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 6 15 12 9 18"/></svg></div>`;
+      } else {
+        row.innerHTML += `<div class="tree-no-toggle"></div>`;
+      }
+      row.innerHTML += `<div class="tree-dot" style="background:${color}"></div>`;
+    }
+
+    row.innerHTML += `
+      <div class="tree-sigla" style="${!isRoot?'color:'+color:''}">${item.s}</div>
+      <div class="tree-name">${item.n}</div>
+      <div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-left:auto">
+        <div class="tree-ramal">${phoneIcon(10)} ${item.r}</div>
+        ${email?`<div class="tree-email">${emailIcon(10)} <a href="mailto:${email}" onclick="event.stopPropagation()">${email}</a></div>`:''}
+      </div>`;
+
+    div.appendChild(row);
+
+    if (hasKids) {
+      const childrenDiv = document.createElement('div');
+      childrenDiv.className = 'tree-children';
+      childrenDiv.id = 'tc-' + item.s;
+      item.kids.forEach(k => childrenDiv.appendChild(treeRow(k, color)));
+      div.appendChild(childrenDiv);
+
+      row.addEventListener('click', (e) => {
+        if (e.target.closest('a')) return;
+        const tc = document.getElementById('tc-' + item.s);
+        const ti = document.getElementById('ti-' + item.s);
+        tc.classList.toggle('open');
+        if(ti) ti.classList.toggle('open');
+      });
+    } else {
+      row.addEventListener('click', (e) => {
+        if (e.target.closest('a')) return;
+        openModal(item.s, color);
+      });
+    }
+
+    return div;
+  }
+
+  // Presidência root
+  const presDiv = document.createElement('div');
+  presDiv.className = 'tree-item';
+  const presRow = document.createElement('div');
+  presRow.className = 'tree-row tree-root-row';
+  const presEmail = getMainEmail('PRESIDENCIA');
+  presRow.innerHTML = `
+    <div class="tree-sigla">Presidência</div>
+    <div class="tree-name">Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira</div>
+    <div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-left:auto">
+      <div class="tree-ramal">${phoneIcon(10)} 3605 · 3606 · 3607</div>
+      ${presEmail?`<div class="tree-email">${emailIcon(10)} <a href="mailto:${presEmail}" onclick="event.stopPropagation()">${presEmail}</a></div>`:''}
+    </div>`;
+  presRow.style.cursor='pointer';
+  presRow.addEventListener('click',(e)=>{if(!e.target.closest('a'))openModal('PRESIDENCIA','#004D40');});
+  presDiv.appendChild(presRow);
+  wrap.appendChild(presDiv);
+
+  const sections = [
+    {label:'Assistência direta e imediata ao Presidente', items:D.assist, color:COLORS.assist},
+    {label:'Órgão colegiado', items:D.coleg, color:COLORS.coleg},
+    {label:'Órgãos seccionais', items:D.secc, color:COLORS.secc},
+    {label:'Órgãos específicos singulares — Diretorias', items:D.sing, color:COLORS.sing},
+  ];
+
+  sections.forEach(sec => {
+    const label = document.createElement('div');
+    label.className = 'tree-section-label';
+    label.style.color = sec.color;
+    label.innerHTML = `<div style="width:8px;height:8px;border-radius:50%;background:${sec.color};flex-shrink:0"></div>${sec.label}`;
+    wrap.appendChild(label);
+    sec.items.forEach(item => wrap.appendChild(treeRow(item, sec.color)));
+  });
+}
+
+// ─────────────────────────────────────────
+// EDIT MODE
+// ─────────────────────────────────────────
+let editMode = false;
+let currentEditSigla = null;
+
+// Load overrides from localStorage on startup
+(function loadSaved(){
+  try {
+    const saved = localStorage.getItem('inep_pessoas_overrides');
+    if (saved) {
+      const overrides = JSON.parse(saved);
+      Object.assign(PESSOAS, overrides);
+    }
+  } catch(e) {}
+})();
+
+function toggleEditMode() {
+  editMode = !editMode;
+  const btn = document.getElementById('editModeBtn');
+  const banner = document.getElementById('editBanner');
+  const exportBtn = document.getElementById('exportBtn');
+  if (editMode) {
+    btn.classList.add('edit-active');
+    btn.innerHTML = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg> Sair da Edição`;
+    banner.classList.add('show');
+    exportBtn.style.display = 'flex';
+  } else {
+    btn.classList.remove('edit-active');
+    btn.innerHTML = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg> Editar`;
+    banner.classList.remove('show');
+    exportBtn.style.display = 'none';
+  }
+  // Show/hide edit button in modal
+  const editBtn = document.getElementById('modalEditBtn');
+  if (editBtn) editBtn.style.display = editMode ? 'flex' : 'none';
+}
+
+function openEditFromModal() {
+  if (!currentEditSigla) return;
+  openEditModal(currentEditSigla);
+}
+
+function openEditModal(sigla) {
+  currentEditSigla = sigla;
+  const info = getAreaInfo(sigla);
+  const data = PESSOAS[sigla];
+  const nomeArea = sigla === 'PRESIDENCIA' ? 'Presidência' : (info ? info.n : sigla);
+
+  document.getElementById('editModalTitle').textContent = `Editar: ${sigla} — ${nomeArea}`;
+
+  const list = document.getElementById('editPersonList');
+  list.innerHTML = '';
+
+  const pessoas = (data && data.pessoas) ? JSON.parse(JSON.stringify(data.pessoas)) : [];
+  // Store current state for manipulation
+  list._pessoas = pessoas;
+  renderEditList(list, pessoas);
+
+  document.getElementById('editOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function renderEditList(list, pessoas) {
+  list.innerHTML = '';
+  pessoas.forEach((p, i) => {
+    const row = document.createElement('div');
+    row.className = 'edit-person-row';
+    row.innerHTML = `
+      <button class="edit-del-btn" onclick="removeEditPerson(${i})" title="Remover">×</button>
+      <div class="edit-sigla-label">${i === 0 ? '⭐ Titular' : `Pessoa ${i + 1}`}</div>
+      <div class="edit-person-fields">
+        <div class="edit-field" style="grid-column:1/-1">
+          <label>Nome completo</label>
+          <input type="text" data-field="nome" data-idx="${i}" value="${escHtml(p.nome || '')}" placeholder="Nome da pessoa">
+        </div>
+        <div class="edit-field" style="grid-column:1/-1">
+          <label>Cargo</label>
+          <input type="text" data-field="cargo" data-idx="${i}" value="${escHtml(p.cargo || '')}" placeholder="Cargo / função">
+        </div>
+        <div class="edit-field">
+          <label>E-mail</label>
+          <input type="email" data-field="email" data-idx="${i}" value="${escHtml(p.email || '')}" placeholder="email@inep.gov.br">
+        </div>
+        <div class="edit-field">
+          <label>Ramal / Telefone</label>
+          <input type="text" data-field="ramal" data-idx="${i}" value="${escHtml(p.ramal || '')}" placeholder="ex: 3605">
+        </div>
+      </div>
+      <label class="edit-sec-toggle">
+        <input type="checkbox" data-field="secretaria" data-idx="${i}" ${p.secretaria ? 'checked' : ''}>
+        Marcar como Secretaria/Apoio
+      </label>`;
+    list.appendChild(row);
+  });
+  list._pessoas = pessoas;
+}
+
+function escHtml(s) { return String(s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+function addEditPerson() {
+  const list = document.getElementById('editPersonList');
+  const pessoas = list._pessoas || [];
+  pessoas.push({ nome: '', cargo: '', email: '', ramal: '', secretaria: false });
+  renderEditList(list, pessoas);
+  list.scrollTop = list.scrollHeight;
+}
+
+function removeEditPerson(idx) {
+  const list = document.getElementById('editPersonList');
+  const pessoas = list._pessoas || [];
+  pessoas.splice(idx, 1);
+  renderEditList(list, pessoas);
+}
+
+function saveEditModal() {
+  const list = document.getElementById('editPersonList');
+  const pessoas = list._pessoas || [];
+
+  // Read current input values back into pessoas array
+  list.querySelectorAll('input').forEach(inp => {
+    const i = parseInt(inp.dataset.idx);
+    const field = inp.dataset.field;
+    if (isNaN(i) || !field) return;
+    if (inp.type === 'checkbox') {
+      pessoas[i][field] = inp.checked;
+    } else {
+      pessoas[i][field] = inp.value.trim();
+    }
+  });
+
+  // Ensure PESSOAS entry exists
+  if (!PESSOAS[currentEditSigla]) {
+    PESSOAS[currentEditSigla] = { eyebrow: currentEditSigla, pessoas: [] };
+  }
+  PESSOAS[currentEditSigla].pessoas = pessoas;
+
+  // Persist to localStorage
+  try {
+    const saved = JSON.parse(localStorage.getItem('inep_pessoas_overrides') || '{}');
+    saved[currentEditSigla] = PESSOAS[currentEditSigla];
+    localStorage.setItem('inep_pessoas_overrides', JSON.stringify(saved));
+  } catch(e) {}
+
+  closeEditModal();
+
+  // Refresh the view modal if it's open
+  const sigla = currentEditSigla;
+  const overlay = document.getElementById('modalOverlay');
+  if (overlay.classList.contains('open')) {
+    // Re-render modal body
+    const data = PESSOAS[sigla];
+    const body = document.getElementById('modalBody');
+    if (!data || !data.pessoas || data.pessoas.length === 0) {
+      body.innerHTML = `<div class="empty-state"><div class="empty-state-icon">👥</div><p>Nenhuma pessoa cadastrada para esta área.</p></div>`;
+    } else {
+      const rows = data.pessoas.map(p => `
+        <tr class="${p.secretaria?'secretaria-row':''}">
+          <td>
+            <div class="person-name">${p.nome}${p.secretaria?'<span class="secretaria-badge">Secretaria</span>':''}</div>
+            <div class="person-role">${p.cargo}</div>
+          </td>
+          <td>
+            <div class="person-email">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <a href="mailto:${p.email}">${p.email}</a>
+            </div>
+          </td>
+          <td>
+            <div class="person-ramal">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 10.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 0h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 7.91a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 15.92z"/></svg>
+              ${p.ramal}
+            </div>
+          </td>
+        </tr>`).join('');
+      body.innerHTML = `
+        <div class="modal-section-title">Equipe (${data.pessoas.length} pessoa${data.pessoas.length!==1?'s':''})</div>
+        <table class="people-table">
+          <thead><tr><th>Nome / Cargo</th><th>E-mail</th><th>Ramal</th></tr></thead>
+          <tbody>${rows}</tbody>
+        </table>`;
+    }
+    document.getElementById('modalFooterNote').textContent = `${sigla} · ${data && data.pessoas ? data.pessoas.length : 0} pessoa(s) cadastrada(s)`;
+  }
+
+  // Show toast
+  showToast('✅ Alterações salvas com sucesso!');
+}
+
+function closeEditModal() {
+  document.getElementById('editOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function handleEditOverlayClick(e) {
+  if (e.target === document.getElementById('editOverlay')) closeEditModal();
+}
+
+// Toast notification
+function showToast(msg) {
+  let toast = document.getElementById('editToast');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.id = 'editToast';
+    toast.style.cssText = 'position:fixed;bottom:60px;left:50%;transform:translateX(-50%);background:#1B6B3A;color:white;padding:10px 20px;border-radius:10px;font-size:13px;font-weight:600;z-index:999;box-shadow:0 4px 16px rgba(0,0,0,0.2);transition:opacity 0.4s';
+    document.body.appendChild(toast);
+  }
+  toast.textContent = msg;
+  toast.style.opacity = '1';
+  setTimeout(() => { toast.style.opacity = '0'; }, 2500);
+}
+
+// Export updated HTML
+function exportHTML() {
+  // Serialize current PESSOAS (merged with saved overrides) back into the file
+  const pessoasStr = JSON.stringify(PESSOAS, null, 2);
+  let html = document.documentElement.outerHTML;
+
+  // Replace the PESSOAS const in the exported HTML
+  html = html.replace(/const PESSOAS\s*=\s*\{[\s\S]*?\};\s*\n\/\/ ─+\n\/\/ LOOK UP/, `const PESSOAS = ${pessoasStr};\n// ─────────────────────────────────────────\n// LOOK UP`);
+
+  const blob = new Blob([html], {type: 'text/html;charset=utf-8'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'organograma-inep-atualizado.html';
+  a.click();
+  setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+  showToast('📥 HTML exportado com as alterações!');
+}
+
+// ─────────────────────────────────────────
+// Init
+buildStats();
+setCounts();
+renderChips('row-assist',D.assist,COLORS.assist);
+renderChips('row-coleg',D.coleg,COLORS.coleg);
+renderCards('grid-secc',D.secc,COLORS.secc,LIGHT.secc);
+renderCards('grid-sing',D.sing,COLORS.sing,LIGHT.sing);
+</script>
+</body>
+</html>
